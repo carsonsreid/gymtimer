@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Digital-7', monospace; /* The font is unchanged */
+}
+
+#timer-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timer-part {
+    font-size: 100px;
+    display: inline-block; /* Inline-block for better control */
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: lime;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60%; /* Position below the vertically centered DN 05:00 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.control-button {
+    font-size: 24px;
+    padding: 15px 30px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: none;
+    width: 300px; /* Fixed width for buttons */
+}
+
+.white {
+    background-color: white;
+    color: black;
+}
+
+.grey {
+    background-color: #555;
+    color: white;
+}
+
+.control-button:hover {
+    background-color: #666;
+}
+
+.white:hover {
+    color: white;
+    background-color: black;
+}
+
+/* Initially, only the start button is displayed */
+#startButton {
+    display: block;
+}
+
+.edit-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Adjust the gap between icon and text as needed */
+}
+
+.edit-button i {
+    /* Style for the icon */
+    color: inherit; /* Inherit color from parent */
+}
